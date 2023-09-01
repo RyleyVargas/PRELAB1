@@ -1,0 +1,21 @@
+include <stdio.h>
+int main(int argc, char* argv[]) {
+    int count = 13;
+    int *p = &count;
+    int value = *p;
+    int *q = &count;
+    int** pq = &q;
+    
+    // update the value that q points to
+    *q = *q + 1;
+    printf("Value of p: %p\n", p);
+    p = p + 1;
+    printf("New value of p: %p\n", p);
+    printf("Value of *q: %d\n", *q);
+    printf("Value of count: %d\n", count);
+    printf("Value of value: %d\n", value);
+    
+return 0;
+}
+
+
